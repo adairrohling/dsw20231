@@ -1,4 +1,4 @@
-import { getAllStudent } from "@/app/model/StudentService";
+import { addStudent, getAllStudent } from "@/app/model/StudentService";
 import { NextResponse } from "next/server";
 
 export async function GET() {
