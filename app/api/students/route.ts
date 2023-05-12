@@ -9,3 +9,14 @@ export async function GET() {
     return NextResponse.json(studentes);
   
   }
+  export async function POST(
+    request: Request
+  ) {
+    const body = await request.json();
+    console.log(body)
+    //const client = await db.connect(); 
+    //const {rows} = await client.sql`INSERT INTO Student (name, email) VALUES (${body.name}, ${body.email})`
+    addStudent(body.name, body.email)
+    return NextResponse.json({ success: "ok" });
+  }
+  
